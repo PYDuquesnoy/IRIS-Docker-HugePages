@@ -1,0 +1,9 @@
+[Startup]
+#password SYS
+PasswordHash=8511fe0215912efb646d884e82cd612470b07cd6,t1mt0fka
+
+[config]
+globals=0,0,100,0,0,0
+routines=35
+#LargePagesRequired = 1 -> 64
+memlock=64 

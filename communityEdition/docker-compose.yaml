@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  irislpcom:
+    #privileged: true
+    cap_add:
+    - IPC_LOCK
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: irislpcom
+    #image: containers.intersystems.com/intersystems/iris-community:2022.1.0.209.0
+    ports:
+      - 9191:52773
+      - 9192:1972
+    command:  --check-caps false  #--key /shared/iris.key
+    volumes:
+      - ./shared:/shared
+      - ./durable:/dur
+
+    environment:
+      - ISC_CPF_MERGE_FILE=/shared/irislpmerge.cpf
+      - ISC_DATA_DIRECTORY=/dur/config
+    

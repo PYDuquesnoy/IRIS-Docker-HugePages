@@ -1,4 +1,4 @@
-FROM containers.intersystems.com/intersystems/iris:2022.1.0.209.0
+FROM containers.intersystems.com/intersystems/iris-community:2022.1.0.209.0
 #Add all your optional container add-ons here
 #Install software in IRIS here
 
